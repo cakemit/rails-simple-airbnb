@@ -5,7 +5,7 @@ Flat.destroy_all
 
 puts "Creating 10 flats..."
 for i in (1..10) do
-  flat = Flat.create(
+  flat = Flat.create!(
     name: [Faker::Book.title, Faker::Book.author].join(' - '),
     address: Faker::Address.full_address,
     description: Faker::Lorem.paragraph(sentence_count: 10),
